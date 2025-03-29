@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 28485c2a930179d42b124c5169e78948
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - introMusic: {fileID: 8300000, guid: e71889c89dda09e45800ffc72ff08fe4, type: 3}
+  - mainMenuMusic: {fileID: 8300000, guid: 1de5424e2767dc14594b553c55dfd458, type: 3}
+  - gameMusic: {instanceID: 0}
+  - victoryMusic: {instanceID: 0}
+  - defeatMusic: {instanceID: 0}
+  - volumeSlider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
