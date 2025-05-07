@@ -35,12 +35,14 @@ public class PlayerWindow : MonoBehaviour
         public MiniGame gamePrefab;
     }
 
+    public int playerNumber;
     public MiniGameData[] availableGames;
     public Transform gameContainer;
     private MiniGame currentMiniGame;
 
     public void ShowWindow(Players player)
     {
+        this.playerNumber = player.playerNumber; // Сохраняем номер
         player.DisableControl();
         gameObject.SetActive(true);
         StartRandomMiniGame();
