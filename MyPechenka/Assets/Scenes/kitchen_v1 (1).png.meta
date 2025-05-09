@@ -596,13 +596,13 @@ TextureImporter:
       name: kitchen_v1 (1)_23
       rect:
         serializedVersion: 2
-        x: 51
-        y: 96
+        x: 52
+        y: 93
         width: 56
-        height: 41
+        height: 38
       alignment: 9
-      pivot: {x: 0.5000002, y: 0.45172864}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5000002, y: 0.4517286}
+      border: {x: 0, y: 0, z: 0, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -622,7 +622,7 @@ TextureImporter:
         width: 18
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -643,7 +643,7 @@ TextureImporter:
         width: 62
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -664,7 +664,7 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -672,6 +672,27 @@ TextureImporter:
       bones: []
       spriteID: 87d09600b35279441be58e09e65894b0
       internalID: 573524496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kitchen_v1 (1)_27
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2
+        width: 91
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416d4b15d8c6e884f97f842dde9b7017
+      internalID: -1791213297
       vertices: []
       indices: 
       edges: []
@@ -711,6 +732,7 @@ TextureImporter:
       kitchen_v1 (1)_24: -1069161820
       kitchen_v1 (1)_25: -325067394
       kitchen_v1 (1)_26: 573524496
+      kitchen_v1 (1)_27: -1791213297
       kitchen_v1 (1)_3: -718164463
       kitchen_v1 (1)_4: 2080170554
       kitchen_v1 (1)_5: 539570727
