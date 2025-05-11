@@ -1,44 +1,38 @@
-/*using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class TriggerAction : MonoBehaviour
-{
-    public PlayerWindow playerWindow;
-    public Player_2Window player_2Window;
+//public class TriggerAction : MonoBehaviour
+//{
+//    public PlayerWindow playerWindow;
+//    public PlayerWindow player2Window;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Players player = other.GetComponent<Players>();
-        if (player != null && player.name == "Player")
-        {
-            if (playerWindow != null)
-            {
-                player.DisableControl(); // Пока не даем двигаться. По хорошему убрать джойстики
-                playerWindow.ShowWindow();
-                Destroy(gameObject);
-            }
-        }
-        else if (player != null && player.name == "Player_2")
-        {
-            if (player_2Window != null)
-            {
-                player.DisableControl(); // Пока не даем двигаться. По хорошему убрать джойстики
-                player_2Window.ShowWindow();
-                Destroy(gameObject);
-            }
-        }
-    }
-}
-*/
-using System.Collections;
-using System.Collections.Generic;
+//    private void OnTriggerEnter2D(Collider2D other)
+//    {
+//        Players player = other.GetComponent<Players>();
+//        if (player == null) return;
+
+//        PlayerWindow targetWindow = (player.name == "Player") ? playerWindow : player2Window;
+
+//        if (targetWindow != null)
+//        {
+//            Destroy(gameObject);
+//            targetWindow.ShowWindow(player);
+//        }
+//    }
+//}
 using UnityEngine;
 
 public class TriggerAction : MonoBehaviour
 {
     public PlayerWindow playerWindow;
     public PlayerWindow player2Window;
+
+    private void Start()
+    {
+        // Изначально выключаем триггер, пока не пройдены комочки
+        gameObject.SetActive(false);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

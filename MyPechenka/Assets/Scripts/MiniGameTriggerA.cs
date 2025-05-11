@@ -2,52 +2,33 @@
 
 //public class MiniGameTriggerA : MonoBehaviour
 //{
-//  //  private bool isGameCompleted = false;
+//    public DoughGameManager targetManager; // Перетащите нужный менеджер в инспекторе!
+//    public enum PlayerTarget { Player1Only, Player2Only }
+//    public PlayerTarget targetPlayer;
 
 //    private void OnTriggerEnter2D(Collider2D other)
 //    {
-
-//       if (other.CompareTag("Player1"))
+//        if (other.CompareTag("Player1") && targetPlayer == PlayerTarget.Player1Only)
 //        {
-//            // Получаем компонент движения игрока и отключаем его
-//            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
-//            if (playerMovement != null)
-//            {
-//                playerMovement.SetMovementEnabled(false);
-//            }
-//            DoughGameManager.Instance.StartMiniGame(1);
+//            ActivateGame(other);
 //        }
-//        // Если вошёл объект с тегом "Player2"
-//        else if (other.CompareTag("Player2"))
+//        else if (other.CompareTag("Player2") && targetPlayer == PlayerTarget.Player2Only)
 //        {
-//            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
-//            if (playerMovement != null)
-//            {
-//                playerMovement.SetMovementEnabled(false);
-//            }
-//            DoughGameManager.Instance.StartMiniGame(2);
+//            ActivateGame(other);
 //        }
 //    }
 
-//    private void OnTriggerExit2D(Collider2D other)
+//    private void ActivateGame(Collider2D player)
 //    {
-//        if (other.CompareTag("Player1"))
-//        {
-//            DoughGameManager.Instance.EndMiniGame(1);
-//        }
-//        else if (other.CompareTag("Player2"))
-//        {
-//            DoughGameManager.Instance.EndMiniGame(2);
-//        }
+//        player.GetComponent<PlayerMovement>().SetMovementEnabled(false);
+//        targetManager.StartMiniGame(this);
 //    }
-//    // Добавляем метод для отключения триггера
+
 //    public void DisableTrigger()
 //    {
-//    //    isGameCompleted = true;
-//        GetComponent<Collider2D>().enabled = false; // Отключаем коллайдер
-//        GetComponent<SpriteRenderer>().enabled = false; // Скрываем визуально (если есть спрайт)
+//        GetComponent<Collider2D>().enabled = false;
+//        GetComponent<SpriteRenderer>().enabled = false;
 //    }
-
 //}
 
 using UnityEngine;

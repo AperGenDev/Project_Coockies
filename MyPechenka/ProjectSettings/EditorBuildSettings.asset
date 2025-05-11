@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menushka.unity
     guid: 3e3515aa68e58e948ae55718358c33d1
   - enabled: 1
+    path: Assets/Scenes/StoryStart.unity
+    guid: 92954d23bcb27a24fa512d25a4d70ae5
+  - enabled: 1
+    path: Assets/Scenes/MemoryGame.unity
+    guid: c506108c1b75b644b9bda1f53f860e39
+  - enabled: 1
+    path: Assets/Scenes/StoryEnd.unity
+    guid: 56fd82b9367083b47a30f75dd5b9471e
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1

@@ -1,11 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class MainMenuhska : MonoBehaviour
 {
+    [SerializeField] private string storyStartSceneName = "StoryStart";
+    [SerializeField] private string resumeSceneName = "SampleScene";
+
+    [SerializeField] private GameObject OptionsMenu; // РџРµСЂРµС‚СЏРЅРё OptionsMenu РІ РёРЅСЃРїРµРєС‚РѕСЂРµ
+
     public void PlayGame()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
@@ -15,43 +17,35 @@ public class MainMenuhska : MonoBehaviour
         }
         else
         {
-            Debug.Log("Нет следующей сцены!");
-            // Можно, например, вернуться в меню:
+            Debug.Log("РќРµС‚ СЃР»РµРґСѓСЋС‰РµР№ СЃС†РµРЅС‹!");
+            // РњРѕР¶РЅРѕ, РЅР°РїСЂРёРјРµСЂ, РІРµСЂРЅСѓС‚СЊСЃСЏ РІ РјРµРЅСЋ:
             SceneManager.LoadScene(0);
+	}
+        if (GameManager.Instance != null && GameManager.Instance.IsPaused)
+        {
+            GameManager.Instance.IsPaused = false;
+            SceneManager.LoadScene(resumeSceneName);
+        }
+        else
+        {
+            SceneManager.LoadScene(storyStartSceneName);
         }
     }
 
+    public void OpenSettings()
+    {
+        OptionsMenu.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        OptionsMenu.SetActive(false);
+    }
 
     public void ExitGame()
     {
-        Debug.Log("Вышел из игры");
+        Debug.Log("Р’С‹С€РµР» РёР· РёРіСЂС‹");
         Application.Quit();
     }
 
-
 }
-//using UnityEngine;
-//using UnityEngine.SceneManagement;
-
-//public class MainMenu : MonoBehaviour
-//{
-//    public void PlayGame()
-//    {
-//        // Загружаем игру, выгружая меню
-//        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
-//    }
-
-//    public void ReturnToMenu()
-//    {
-//        // Удаляем все объекты из игры, которые не нужны в меню
-//        Destroy(GameObject.Find("GameCanvas"));
-
-//        // Загружаем меню
-//        SceneManager.LoadScene("Menushka", LoadSceneMode.Single);
-//    }
-
-//    public void ExitGame()
-//    {
-//        Application.Quit();
-//    }
-//}
