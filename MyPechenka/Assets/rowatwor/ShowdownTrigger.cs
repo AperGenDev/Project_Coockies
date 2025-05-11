@@ -58,19 +58,21 @@ public class ShowdownTrigger : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other)
+{
+    if (isActivated && (other.CompareTag("Player1") || other.CompareTag("Player2")))
     {
-        if (isActivated && (other.CompareTag("Player1") || other.CompareTag("Player2")))
+        Players player = other.GetComponent<Players>();
+        if (player != null && player.playerNumber == activatingPlayerNumber)
         {
-            Players player = other.GetComponent<Players>();
-            if (player != null && player.playerNumber == activatingPlayerNumber)
-            {
-                // Явно сохраняем данные для HandController
-                PlayerPrefs.SetInt("LastMiniGameWinner", activatingPlayerNumber);
-                PlayerPrefs.Save(); // Важно: принудительно сохраняем
+            // Сохраняем победителя как строку
+            PlayerPrefs.SetString("Winner", $"Player{activatingPlayerNumber}");
+            PlayerPrefs.SetInt("LastMiniGameWinner", activatingPlayerNumber);
+            PlayerPrefs.Save(); // Сохраняем PlayerPrefs на диск
 
-                Debug.Log($"Активировал триггер Игрок {activatingPlayerNumber}");
-                SceneManager.LoadScene(showdownSceneName);
-            }
+            Debug.Log($"Активировал триггер Игрок {activatingPlayerNumber}");
+            SceneManager.LoadScene(showdownSceneName);
         }
     }
+}
+
 }
