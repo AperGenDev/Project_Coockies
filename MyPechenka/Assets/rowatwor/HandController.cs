@@ -107,7 +107,5 @@ public class HandController : MonoBehaviour
             );
             yield return null;
         }
-
-        SceneManager.LoadScene("Menushka");
     }
 }

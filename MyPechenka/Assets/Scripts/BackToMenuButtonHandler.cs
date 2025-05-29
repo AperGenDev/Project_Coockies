@@ -7,4 +7,8 @@ public class BackToMenuButtonHandler : MonoBehaviour
     {
         SceneManager.LoadScene("Menushka");
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

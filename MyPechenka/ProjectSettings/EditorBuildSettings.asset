@@ -25,5 +25,9 @@ EditorBuildSettings:
     guid: c66c174dbfc13ca4b8ddf720b11af2f0
   - enabled: 1
     path: Assets/Scenes/GameFinishing.unity
+<<<<<<< Updated upstream
     guid: 5b4a14c72c49acb46abd4539b5fc84e1
+=======
+    guid: c4b17c3f3e06a1b4dbf366357837be9c
+>>>>>>> Stashed changes
   m_configObjects: {}
